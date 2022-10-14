@@ -11,13 +11,32 @@
 }
 
 input[type="text"] {
+    display: block;
+    width: 100%;
     padding: 10px 15px;
-    border: 1px solid #c1c1c1;
+    border: 1px solid #ccc;
     border-radius: 4px;
+    margin-bottom: 2rem;
 }
 
 input[type="text"]:focus {
     outline: 0;
-    
+    border: 1px solid greenyellow;
 }
 
+#root-ul {
+    padding-left: 0;
+    text-align: left;
+}
+
+#root-ul li {
+    list-style: none;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+}
+
+#root-ul li:last-child {
+    margin-bottom: 0;
+}

@@ -1,15 +1,14 @@
-const currentList = []
 const input = document.getElementById('root-input')
 const ul = document.getElementById('root-ul')
+const currentList = []
 
 class Todo {
-    // Constructor
     constructor(currentList){
         // ist kein setter oder getter > also ohne _ ???
         this.currentList = currentList
         this.addTodoListeners()
     }
-    
+
     // Add DOM Event Listeners
     addTodoListeners(){
         input.addEventListener('change', (event) => {
