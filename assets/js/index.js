@@ -32,6 +32,7 @@ class Todo {
         })
     }
 
+    // Clear Todo field
     clearTodoField(){
         input.value = ''
     }
