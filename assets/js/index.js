@@ -4,7 +4,6 @@ const currentList = []
 
 class Todo {
     constructor(currentList){
-        // ist kein setter oder getter > also ohne _ ???
         this.currentList = currentList
         this.addTodoListeners()
     }
@@ -23,19 +22,30 @@ class Todo {
         this.clearTodoField()
     }
 
+    // Clear Todo field
+    clearTodoField(){
+        input.value = ''
+    }
+
+    // Delete single Todo item
+    deleteTodoItem(){
+
+    }
+
     // Render Todo list
     renderTodoList(currentList){
         let li = document.createElement('li')
-        currentList.forEach(item => {
+        currentList.forEach((item, index) => {
+            // Don't start IDs with zero
+            index = index + 1
+            // Build LI
+            li.setAttribute('class', 'todo-item todo-item-' + index)
+            li.setAttribute('data-item-id', index)
             li.innerText = item
             ul.appendChild(li)
         })
     }
 
-    // Clear Todo field
-    clearTodoField(){
-        input.value = ''
-    }
 }
 
 // Load everything
